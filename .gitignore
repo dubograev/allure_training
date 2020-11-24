@@ -1,22 +1,42 @@
-plugins {
-    id 'java'
-}
+# Compiled class file
+*.class
 
-repositories {
-    mavenCentral()
-}
+# Log file
+*.log
 
-dependencies {
-    testImplementation "com.codeborne:selenide:5.15.1"
-    testImplementation "org.junit.jupiter:junit-jupiter-api:5.6.2"
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.6.2"
-    compile group: 'com.github.javafaker', name: 'javafaker', version: '0.15'
-}
+# BlueJ files
+*.ctxt
 
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-}
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
 
-test {
-    useJUnitPlatform()
-}
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.iml
+
+# Project gen files
+.idea
+.allure/
+.gradle/
+allure-results/
+gradle/
+build/
+bin/
+out/
+logs/
+target/
+.classpath
+.project
+.settings/org.eclipse.buildship.core.prefs
+.vscode
+/gradlew
+/gradlew.bat
+.todo
+local.properties
+build.gradle
