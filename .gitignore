@@ -1,14 +1,22 @@
-.gradle
-/build/
+plugins {
+    id 'java'
+}
 
-# Ignore Gradle GUI config
-gradle-app.setting
+repositories {
+    mavenCentral()
+}
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
+dependencies {
+    testImplementation "com.codeborne:selenide:5.15.1"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.6.2"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.6.2"
+    compile group: 'com.github.javafaker', name: 'javafaker', version: '0.15'
+}
 
-# Cache of project
-.gradletasknamecache
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
 
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties
+test {
+    useJUnitPlatform()
+}
